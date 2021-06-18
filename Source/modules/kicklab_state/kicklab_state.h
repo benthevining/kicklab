@@ -25,7 +25,7 @@ namespace Kicklab
 {
 struct State : StateBase
 {
-    State() : StateBase ("NewState")
+    State() : StateBase ("KicklabState")
     {
         add (parameters);
     }

@@ -14,7 +14,7 @@ public:
     State& getState() { return state; }
 
 private:
-    bool canAddBus (bool isInput) const final { return isInput; }
+    bool canAddBus (bool isInput) const final;
     bool isBusesLayoutSupported (const BusesLayout& layouts) const final;
 
     double         getTailLengthSeconds() const final;

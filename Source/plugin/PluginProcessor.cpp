@@ -28,10 +28,13 @@ double Processor::getTailLengthSeconds() const
     return 0.;
 }
 
+bool Processor::canAddBus (bool isInput) const 
+{
+    return ! isInput;
+}
+
 bool Processor::isBusesLayoutSupported (const BusesLayout& layouts) const
 {
-    if (layouts.getMainInputChannelSet().isDisabled() && layouts.getChannelSet (true, 1).isDisabled()) return false;
-
     return layouts.getMainOutputChannelSet() == juce::AudioChannelSet::stereo();
 }
 

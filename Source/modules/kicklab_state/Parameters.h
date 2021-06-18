@@ -8,7 +8,7 @@ using namespace ParameterValueConversionLambdas;
 
 struct Parameters : ParameterList
 {
-    Parameters() : ParameterList ("NewParameters")
+    Parameters() : ParameterList ("KicklabParameters")
     {
         add (mainBypass);
     }
