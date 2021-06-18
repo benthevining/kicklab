@@ -18,6 +18,8 @@ END_JUCE_MODULE_DECLARATION
 #include <bv_dsp/bv_dsp.h>
 #include <kicklab_state/kicklab_state.h>
 
+#include "synth/KickSynth.h"
+
 
 namespace Kicklab
 {
@@ -37,6 +39,8 @@ private:
 
     State&      state;
     Parameters& parameters {state.parameters};
+
+    KickSynth< SampleType > synth;
 };
 
 }  // namespace Kicklab
