@@ -41,7 +41,7 @@ struct PresetManager : PresetManagerBase
     }
 
     std::string getCompanyName() final { return "Ben Vining Music Software"; }
-    std::string getProductName() final { return "NewProject"; }
+    std::string getProductName() final { return "Kicklab"; }
     std::string getPresetFileExtension() final { return ".xml"; }
 };
 
