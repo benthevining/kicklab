@@ -1,0 +1,46 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+#
+
+jobs:
+
+
+  build:
+
+    name: ${{ matrix.artifact }} build
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        include:
+        - os: windows-latest
+          artifact: Windows
+        - os: ubuntu-latest
+          artifact: Linux
+        - os: macos-latest
+          artifact: MacOS
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+        path: autoBuild
+        
+    - name: Install JUCE's Linux dependencies
+      if: runner.os == 'Linux'
+      shell: bash
+      run: sudo apt install libasound2-dev libjack-jackd2-dev libcurl4-openssl-dev libfreetype6-dev libx11-dev libxcomposite-dev libxcursor-dev libxcursor-dev libxext-dev libxinerama-dev libxrandr-dev libxrender-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev mesa-common-dev
+    
+    - name: Run main build
+      shell: bash
+      run: cd $GITHUB_WORKSPACE/autoBuild && cmake -B Builds && cmake --build $GITHUB_WORKSPACE/autoBuild/Builds --config Release
