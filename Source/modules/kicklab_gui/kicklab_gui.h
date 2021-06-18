@@ -4,21 +4,21 @@
 
 BEGIN_JUCE_MODULE_DECLARATION
 
-ID:                new_gui
+ID:                kicklab_gui
 vendor:            Ben Vining
 version:           0.0.1
-name:              new_gui
-description:       GUI for my new project
-dependencies:      bv_gui new_state
+name:              kicklab_gui
+description:       GUI for Kicklab
+dependencies:      bv_gui kicklab_state
 
 END_JUCE_MODULE_DECLARATION
 
 #endif
 
 #include <bv_gui/bv_gui.h>
-#include <new_state/new_state.h>
+#include <kicklab_state/kicklab_state.h>
 
-namespace New
+namespace Kicklab
 {
 class GUI : public juce::Component,
             public gui::GUIInitializer
@@ -50,4 +50,4 @@ private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GUI)
 };
 
-}  // namespace New
+}  // namespace Kicklab

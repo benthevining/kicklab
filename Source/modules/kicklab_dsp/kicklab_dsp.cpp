@@ -1,6 +1,6 @@
-#include "new_dsp.h"
+#include "kicklab_dsp.h"
 
-namespace New
+namespace Kicklab
 {
 template < typename SampleType >
 Engine< SampleType >::Engine (State& stateToUse)
@@ -28,4 +28,4 @@ void Engine< SampleType >::released()
 template class Engine< float >;
 template class Engine< double >;
 
-}  // namespace New
+}  // namespace Kicklab

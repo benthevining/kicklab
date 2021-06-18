@@ -1,6 +1,6 @@
-#include "new_gui.h"
+#include "kicklab_gui.h"
 
-namespace New
+namespace Kicklab
 {
 GUI::GUI (State& stateToUse)
     : GUIInitializer (*getTopLevelComponent()),
@@ -35,4 +35,4 @@ void GUI::focusLost (FocusChangeType)
 {
 }
 
-}  // namespace New
+}  // namespace Kicklab

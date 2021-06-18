@@ -1,6 +1,6 @@
 #pragma once
 
-namespace New
+namespace Kicklab
 {
 using namespace bav;
 using namespace ParameterValueConversionLambdas;
@@ -12,8 +12,8 @@ struct Parameters : ParameterList
     {
         add (mainBypass);
     }
-    
+
     ToggleParam mainBypass {"Main bypass", "Main bypass", false};
 };
 
-}  // namespace New
+}  // namespace Kicklab

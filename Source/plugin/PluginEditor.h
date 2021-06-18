@@ -1,15 +1,15 @@
 
 #pragma once
 
-#include "bv_gui/bv_gui.h"
-#include <new_gui/new_gui.h>
+//#include "bv_gui/bv_gui.h"
+#include <kicklab_gui/kicklab_gui.h>
 
 #include "PluginProcessor.h"
 
 
-namespace New
+namespace Kicklab
 {
-class Editor : public bav::gui::EditorBase
+class Editor : public gui::EditorBase
 {
 public:
     Editor (Processor& p);
@@ -25,4 +25,4 @@ private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Editor)
 };
 
-}  // namespace New
+}  // namespace Kicklab

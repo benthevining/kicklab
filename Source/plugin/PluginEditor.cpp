@@ -1,7 +1,7 @@
 
 #include "PluginEditor.h"
 
-namespace New
+namespace Kicklab
 {
 Editor::Editor (Processor& p)
     : EditorBase (p), gui (p.getState())
@@ -25,4 +25,4 @@ void Editor::resizeTriggered()
     gui.setBounds (getLocalBounds());
 }
 
-}  // namespace New
+}  // namespace Kicklab

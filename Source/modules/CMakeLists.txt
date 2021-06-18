@@ -1,3 +1,3 @@
-juce_add_modules (new_dsp
-	              new_gui
-	              new_state)
+juce_add_modules (kicklab_dsp
+	              kicklab_gui
+	              kicklab_state)

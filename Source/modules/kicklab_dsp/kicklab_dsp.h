@@ -4,22 +4,22 @@
 
 BEGIN_JUCE_MODULE_DECLARATION
 
-ID:                new_dsp
+ID:                kicklab_dsp
 vendor:            Ben Vining
 version:           0.0.1
-name:              new_dsp
-description:       DSP for my new project
-dependencies:      bv_dsp new_state
+name:              kicklab_dsp
+description:       DSP for Kicklab
+dependencies:      bv_dsp kicklab_state
 
 END_JUCE_MODULE_DECLARATION
 
 #endif
 
 #include <bv_dsp/bv_dsp.h>
-#include <new_state/new_state.h>
+#include <kicklab_state/kicklab_state.h>
 
 
-namespace New
+namespace Kicklab
 {
 template < typename SampleType >
 class Engine : public dsp::Engine< SampleType >
@@ -39,4 +39,4 @@ private:
     Parameters& parameters {state.parameters};
 };
 
-}  // namespace New
+}  // namespace Kicklab

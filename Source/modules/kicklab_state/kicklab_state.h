@@ -4,11 +4,11 @@
 
 BEGIN_JUCE_MODULE_DECLARATION
 
-ID:                new_state
+ID:                kicklab_state
 vendor:            Ben Vining
 version:           0.0.1
-name:              new_state
-description:       State for my new project
+name:              kicklab_state
+description:       State for Kicklab
 dependencies:      bv_midi bv_plugin bv_networking
 
 END_JUCE_MODULE_DECLARATION
@@ -21,7 +21,7 @@ END_JUCE_MODULE_DECLARATION
 
 #include "Parameters.h"
 
-namespace New
+namespace Kicklab
 {
 struct State : StateBase
 {
@@ -46,4 +46,4 @@ struct PresetManager : PresetManagerBase
 };
 
 
-}  // namespace New
+}  // namespace Kicklab

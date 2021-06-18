@@ -1,7 +1,7 @@
 
 cmake_minimum_required (VERSION 3.18) 
 
-project (NewProject VERSION 0.0.1 LANGUAGES CXX)
+project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
 #set (BV_USE_MTS_ESP TRUE)
 #set (BV_USE_ABLETON_LINK TRUE) 
@@ -22,27 +22,26 @@ set (sourceFiles
 
 #
 
-juce_add_plugin (${CMAKE_PROJECT_NAME}
-    PLUGIN_NAME                     ${CMAKE_PROJECT_NAME}
-    PRODUCT_NAME					${CMAKE_PROJECT_NAME}
+juce_add_plugin (Kicklab
+    PLUGIN_NAME                     Kicklab
+    PRODUCT_NAME					Kicklab
     VERSION                     	${CMAKE_PROJECT_VERSION}
-    BUNDLE_ID                   	com.BenViningMusicSoftware.${CMAKE_PROJECT_NAME}
+    BUNDLE_ID                   	com.BenViningMusicSoftware.Kicklab
     PLUGIN_MANUFACTURER_CODE        Benv
-    DESCRIPTION                     ""
-    IS_SYNTH                        FALSE
+    DESCRIPTION                     "Kick synthesizer"
+    IS_SYNTH                        TRUE
     IS_MIDI_EFFECT                  FALSE
     NEEDS_MIDI_INPUT            	TRUE
-    NEEDS_MIDI_OUTPUT           	TRUE
+    NEEDS_MIDI_OUTPUT           	FALSE
     EDITOR_WANTS_KEYBOARD_FOCUS 	FALSE
     DISABLE_AAX_MULTI_MONO          TRUE
     VST_NUM_MIDI_INS                1
-    VST_NUM_MIDI_OUTS               1
+    VST_NUM_MIDI_OUTS               0
     VST3_CATEGORIES                 ""
     AU_MAIN_TYPE                    ""
     FORMATS                         AU VST3 Standalone Unity
-    MICROPHONE_PERMISSION_ENABLED   TRUE
-    MICROPHONE_PERMISSION_TEXT      ""
-    PLUGIN_CODE                 	Nwpr  # 4 letters, first is capitalized
+    MICROPHONE_PERMISSION_ENABLED   FALSE
+    PLUGIN_CODE                 	Kclb  
     DOCUMENT_BROWSER_ENABLED    	TRUE
     BACKGROUND_AUDIO_ENABLED		FALSE # for iOS
     NEEDS_CURL                  	TRUE
@@ -60,16 +59,16 @@ juce_add_plugin (${CMAKE_PROJECT_NAME}
     SEND_APPLE_EVENTS_PERMISSION_ENABLED FALSE
     )
 
-configure_default_juce_plugin (${CMAKE_PROJECT_NAME})
+configure_default_juce_plugin (Kicklab)
 
-target_sources (${CMAKE_PROJECT_NAME} PRIVATE ${sourceFiles})
+target_sources (Kicklab PRIVATE ${sourceFiles})
 
 source_group (TREE ${sourceDir} PREFIX "" FILES ${sourceFiles})
 
-target_include_directories (${CMAKE_PROJECT_NAME} PRIVATE ${sourceDir})
+target_include_directories (Kicklab PRIVATE ${sourceDir})
 
-add_binary_data_folder (${CMAKE_PROJECT_NAME} assets)
+add_binary_data_folder (Kicklab assets)
 
-target_link_libraries (${CMAKE_PROJECT_NAME} PRIVATE new_dsp new_gui new_state)
+target_link_libraries (Kicklab PRIVATE kicklab_dsp kicklab_gui kicklab_state)
 
 

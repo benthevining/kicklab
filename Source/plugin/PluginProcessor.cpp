@@ -1,7 +1,7 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-namespace New
+namespace Kicklab
 {
 Processor::Processor()
     : ProcessorBase (state.parameters,
@@ -46,10 +46,10 @@ juce::AudioProcessorEditor* Processor::createEditor()
 }
 
 
-}  // namespace New
+}  // namespace Kicklab
 
 // This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
-    return new New::Processor();
+    return new Kicklab::Processor();
 }

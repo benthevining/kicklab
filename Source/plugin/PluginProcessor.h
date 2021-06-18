@@ -1,12 +1,12 @@
 
 #pragma once
 
-#include "bv_plugin/bv_plugin.h"
-#include "bv_dsp/bv_dsp.h"
+//#include "bv_plugin/bv_plugin.h"
+//#include "bv_dsp/bv_dsp.h"
 
-#include <new_dsp/new_dsp.h>
+#include <kicklab_dsp/kicklab_dsp.h>
 
-namespace New
+namespace Kicklab
 {
 class Processor : public dsp::ProcessorBase
 {
@@ -47,4 +47,4 @@ private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Processor)
 };
 
-}  // namespace New
+}  // namespace Kicklab
