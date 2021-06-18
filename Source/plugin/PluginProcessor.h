@@ -1,9 +1,6 @@
 
 #pragma once
 
-//#include "bv_plugin/bv_plugin.h"
-//#include "bv_dsp/bv_dsp.h"
-
 #include <kicklab_dsp/kicklab_dsp.h>
 
 namespace Kicklab
@@ -31,18 +28,15 @@ private:
     bool                        hasEditor() const final;
     juce::AudioProcessorEditor* createEditor() final;
 
-    const String      getName() const final { return "NewProject"; }
-    juce::StringArray getAlternateDisplayNames() const final { return {"New"}; }
+    const String      getName() const final { return "Kicklab"; }
+    juce::StringArray getAlternateDisplayNames() const final { return {"Kcklb", "Kick", "Kck"}; }
 
-    /*=========================================================================================*/
 
     State       state;
     Parameters& parameters {state.parameters};
 
     Engine< float >  floatEngine {state};
     Engine< double > doubleEngine {state};
-
-    /*=========================================================================================*/
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Processor)
 };

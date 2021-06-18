@@ -1,9 +1,7 @@
 
 #pragma once
 
-//#include "bv_gui/bv_gui.h"
 #include <kicklab_gui/kicklab_gui.h>
-
 #include "PluginProcessor.h"
 
 
