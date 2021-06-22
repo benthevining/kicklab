@@ -1,5 +1,5 @@
 #include "PluginProcessor.h"
-#include "PluginEditor.h"
+#include <kicklab_gui/kicklab_gui.h>
 
 namespace Kicklab
 {
@@ -12,10 +12,6 @@ Processor::Processor()
                          .withOutput (TRANS ("Output"), juce::AudioChannelSet::stereo(), true))
 {
     state.addTo (this);
-}
-
-Processor::~Processor()
-{
 }
 
 BoolParameter& Processor::getMainBypass() const
@@ -45,7 +41,7 @@ bool Processor::hasEditor() const
 
 juce::AudioProcessorEditor* Processor::createEditor()
 {
-    return new Editor (*this);
+    return new gui::PluginEditor<GUI>(*this, state);
 }
 
 

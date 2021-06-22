@@ -16,9 +16,7 @@ set (sourceDir ${CMAKE_CURRENT_LIST_DIR}/Source)
 
 set (sourceFiles
     ${sourceDir}/plugin/PluginProcessor.h
-    ${sourceDir}/plugin/PluginProcessor.cpp
-    ${sourceDir}/plugin/PluginEditor.h
-    ${sourceDir}/plugin/PluginEditor.cpp)
+    ${sourceDir}/plugin/PluginProcessor.cpp)
 
 #
 

@@ -9,9 +9,6 @@ class Processor : public dsp::ProcessorBase
 {
 public:
     Processor();
-    ~Processor() override;
-
-    State& getState() { return state; }
 
 private:
     bool canAddBus (bool isInput) const final;
