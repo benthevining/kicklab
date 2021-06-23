@@ -9,13 +9,13 @@ vendor:            Ben Vining
 version:           0.0.1
 name:              kicklab_dsp
 description:       DSP for Kicklab
-dependencies:      bv_dsp kicklab_state
+dependencies:      bv_synth kicklab_state
 
 END_JUCE_MODULE_DECLARATION
 
 #endif
 
-#include <bv_dsp/bv_dsp.h>
+#include <bv_synth/bv_synth.h>
 #include <kicklab_state/kicklab_state.h>
 
 #include "synth/KickSynth.h"
