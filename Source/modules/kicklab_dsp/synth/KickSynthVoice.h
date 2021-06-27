@@ -8,14 +8,11 @@ class KickSynthVoice : public dsp::SynthVoiceBase< SampleType >
 {
 public:
     using AudioBuffer = juce::AudioBuffer< SampleType >;
-
+    
     using dsp::SynthVoiceBase< SampleType >::SynthVoiceBase;
 
 private:
     void renderPlease (AudioBuffer& output, float desiredFrequency, double currentSamplerate) final;
-    void prepared (int blocksize) final;
-    void released() final;
-    void noteCleared() final;
 };
 
 }  // namespace Kicklab

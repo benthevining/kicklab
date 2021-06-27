@@ -2,13 +2,9 @@
 namespace Kicklab
 {
 template < typename SampleType >
-void KickSynth< SampleType >::prepared (int /*blocksize*/)
+void KickSynth< SampleType >::prepared (double samplerate, int blocksize)
 {
-}
-
-template < typename SampleType >
-void KickSynth< SampleType >::samplerateChanged (double /*newSamplerate*/)
-{
+    juce::ignoreUnused (samplerate, blocksize);
 }
 
 template < typename SampleType >

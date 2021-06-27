@@ -11,8 +11,8 @@ public:
     KickSynth() = default;
 
 private:
-    void                               prepared (int blocksize) final;
-    void                               samplerateChanged (double newSamplerate) final;
+    void prepared (double samplerate, int blocksize) final;
+    
     dsp::SynthVoiceBase< SampleType >* createVoice() final;
 };
 

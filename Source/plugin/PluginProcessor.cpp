@@ -41,7 +41,7 @@ bool Processor::hasEditor() const
 
 juce::AudioProcessorEditor* Processor::createEditor()
 {
-    return new gui::PluginEditor<GUI>(*this, state);
+    return new gui::PluginEditor<GUI>(*this, {450, 300}, state);
 }
 
 
