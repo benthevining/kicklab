@@ -30,8 +30,7 @@ void Engine< SampleType >::prepared (int blocksize, double samplerate)
     if (! synth.isInitialized())
         synth.initialize (12, samplerate, blocksize);
 
-    synth.prepare (blocksize);
-    synth.setCurrentPlaybackSampleRate (samplerate);
+    synth.prepare (samplerate, blocksize);
 }
 
 template < typename SampleType >
