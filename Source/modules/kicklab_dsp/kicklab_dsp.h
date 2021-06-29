@@ -15,32 +15,7 @@ END_JUCE_MODULE_DECLARATION
 
 #endif
 
-#include <bv_synth/bv_synth.h>
 #include <kicklab_state/kicklab_state.h>
 
-#include "synth/KickSynth.h"
+#include "Processor/Processor.h"
 
-
-namespace Kicklab
-{
-template < typename SampleType >
-class Engine : public dsp::Engine< SampleType >
-{
-public:
-    using AudioBuffer = juce::AudioBuffer< SampleType >;
-    using MidiBuffer  = juce::MidiBuffer;
-
-    Engine (State& stateToUse);
-
-private:
-    void renderBlock (const AudioBuffer& input, AudioBuffer& output, MidiBuffer& midiMessages, bool isBypassed) final;
-    void prepared (int blocksize, double samplerate) final;
-    void released() final;
-
-    State&      state;
-    Parameters& parameters {state.parameters};
-
-    KickSynth< SampleType > synth;
-};
-
-}  // namespace Kicklab

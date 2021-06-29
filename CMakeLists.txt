@@ -14,10 +14,6 @@ add_subdirectory (Source/modules)
 
 set (sourceDir ${CMAKE_CURRENT_LIST_DIR}/Source)
 
-set (sourceFiles
-    ${sourceDir}/plugin/PluginProcessor.h
-    ${sourceDir}/plugin/PluginProcessor.cpp)
-
 #
 
 juce_add_plugin (Kicklab
@@ -59,14 +55,12 @@ juce_add_plugin (Kicklab
 
 configure_default_juce_plugin (Kicklab)
 
-target_sources (Kicklab PRIVATE ${sourceFiles})
-
-source_group (TREE ${sourceDir} PREFIX "" FILES ${sourceFiles})
+target_sources (Kicklab PRIVATE ${sourceDir}/plugin/Main.cpp)
 
 target_include_directories (Kicklab PRIVATE ${sourceDir})
 
 add_binary_data_folder (Kicklab assets)
 
-target_link_libraries (Kicklab PRIVATE kicklab_dsp kicklab_gui kicklab_state)
+target_link_libraries (Kicklab PRIVATE kicklab_dsp kicklab_gui)
 
 

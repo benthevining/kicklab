@@ -23,12 +23,13 @@ END_JUCE_MODULE_DECLARATION
 
 namespace Kicklab
 {
-struct State : StateBase
+struct State : PluginState
 {
-    State() : StateBase ("KicklabState")
+    State() : PluginState ("KicklabState")
     {
-        add (parameters);
     }
+    
+    ParameterList& getParameters() final { return parameters; }
 
     Parameters parameters;
 };

@@ -2,15 +2,15 @@
 namespace Kicklab
 {
 template < typename SampleType >
-void KickSynth< SampleType >::prepared (double samplerate, int blocksize)
+KickSynth< SampleType >::KickSynth (State& stateToUse)
+    : state (stateToUse)
 {
-    juce::ignoreUnused (samplerate, blocksize);
 }
 
 template < typename SampleType >
 dsp::SynthVoiceBase< SampleType >* KickSynth< SampleType >::createVoice()
 {
-    return new KickSynthVoice< SampleType > (this);
+    return new KickSynthVoice< SampleType > (state, this);
 }
 
 template class KickSynth< float >;

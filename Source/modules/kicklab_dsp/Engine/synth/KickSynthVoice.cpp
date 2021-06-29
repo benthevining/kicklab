@@ -2,6 +2,12 @@
 namespace Kicklab
 {
 template < typename SampleType >
+KickSynthVoice< SampleType >::KickSynthVoice (State& stateToUse, dsp::SynthBase< SampleType >* synth)
+    : dsp::SynthVoiceBase< SampleType > (synth), state (stateToUse)
+{
+}
+
+template < typename SampleType >
 void KickSynthVoice< SampleType >::renderPlease (AudioBuffer& output, float desiredFrequency, double currentSamplerate)
 {
     juce::ignoreUnused (output, desiredFrequency, currentSamplerate);

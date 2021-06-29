@@ -1,45 +1,9 @@
 #include "kicklab_dsp.h"
 
-#include "synth/KickSynth.cpp"
-#include "synth/KickSynthVoice.cpp"
 
-namespace Kicklab
-{
-template < typename SampleType >
-Engine< SampleType >::Engine (State& stateToUse)
-    : state (stateToUse)
-{
-}
+#include "Engine/synth/KickSynthVoice.cpp"
+#include "Engine/synth/KickSynth.cpp"
+#include "Engine/Engine.cpp"
 
-template < typename SampleType >
-void Engine< SampleType >::renderBlock (const AudioBuffer& input, AudioBuffer& output, MidiBuffer& midiMessages, bool isBypassed)
-{
-    juce::ignoreUnused (input);
+#include "Processor/Processor.cpp"
 
-    if (! isBypassed)
-        synth.renderVoices (midiMessages, output);
-    else
-        synth.bypassedBlock (output.getNumSamples(), midiMessages);
-
-    midiMessages.clear();
-}
-
-template < typename SampleType >
-void Engine< SampleType >::prepared (int blocksize, double samplerate)
-{
-    if (! synth.isInitialized())
-        synth.initialize (12, samplerate, blocksize);
-
-    synth.prepare (samplerate, blocksize);
-}
-
-template < typename SampleType >
-void Engine< SampleType >::released()
-{
-    synth.releaseResources();
-}
-
-template class Engine< float >;
-template class Engine< double >;
-
-}  // namespace Kicklab

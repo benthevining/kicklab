@@ -8,12 +8,12 @@ template < typename SampleType >
 class KickSynth : public dsp::SynthBase< SampleType >
 {
 public:
-    KickSynth() = default;
+    KickSynth (State& stateToUse);
 
 private:
-    void prepared (double samplerate, int blocksize) final;
-    
     dsp::SynthVoiceBase< SampleType >* createVoice() final;
+
+    State& state;
 };
 
 }  // namespace Kicklab
