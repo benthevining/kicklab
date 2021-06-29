@@ -1,38 +1,12 @@
 #include "kicklab_gui.h"
 
-namespace Kicklab
-{
-GUI::GUI (State& stateToUse)
-    : GUIInitializer (*getTopLevelComponent()),
-      state (stateToUse)
-{
-    setInterceptsMouseClicks (false, true);
-}
+#include "Header/OutputLevel/LevelMeter.cpp"
+#include "Header/OutputLevel/Thumb.cpp"
+#include "Header/OutputLevel/OutputLevel.cpp"
+#include "Header/PresetBar/PresetBar.cpp"
+#include "Header/ScaleChooser.cpp"
+#include "Header/AboutPopup.cpp"
+#include "Header/LogoButton.cpp"
+#include "Header/Header.cpp"
 
-GUI::~GUI()
-{
-    setLookAndFeel (nullptr);
-}
-
-void GUI::paint (juce::Graphics&)
-{
-}
-
-void GUI::resized()
-{
-}
-
-bool GUI::keyPressed (const juce::KeyPress&)
-{
-    return false;
-}
-
-void GUI::modifierKeysChanged (const juce::ModifierKeys&)
-{
-}
-
-void GUI::focusLost (FocusChangeType)
-{
-}
-
-}  // namespace Kicklab
+#include "GUI/GUI.cpp"
