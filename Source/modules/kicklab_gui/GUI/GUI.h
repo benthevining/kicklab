@@ -5,8 +5,7 @@
 namespace Kicklab
 {
 
-class GUI : public juce::Component,
-            private gui::GUIInitializer
+class GUI : public juce::Component
 {
 public:
     GUI (State& stateToUse);

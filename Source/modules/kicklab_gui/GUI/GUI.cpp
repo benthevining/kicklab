@@ -3,8 +3,7 @@ namespace Kicklab
 {
 
 GUI::GUI (State& stateToUse)
-: GUIInitializer (*getTopLevelComponent()),
-state (stateToUse)
+: state (stateToUse)
 {
     setInterceptsMouseClicks (false, true);
     
