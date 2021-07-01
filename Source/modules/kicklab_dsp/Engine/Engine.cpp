@@ -8,7 +8,7 @@ Engine< SampleType >::Engine (State& stateToUse)
 }
 
 template < typename SampleType >
-void Engine< SampleType >::renderBlock (const AudioBuffer&, AudioBuffer& output, MidiBuffer& midiMessages, bool isBypassed)
+void Engine< SampleType >::renderBlock (const AudioBuffer&, AudioBuffer& output, MidiBuffer& midiMessages, bool)
 {
     synth.renderVoices (midiMessages, output);
 }
@@ -16,6 +16,9 @@ void Engine< SampleType >::renderBlock (const AudioBuffer&, AudioBuffer& output,
 template < typename SampleType >
 void Engine< SampleType >::prepared (int blocksize, double samplerate)
 {
+    if (! synth.isInitialized())
+        synth.initialize (12, samplerate, blocksize);
+    
     synth.prepare (samplerate, blocksize);
 }
 

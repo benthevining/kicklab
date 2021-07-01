@@ -24,7 +24,6 @@ private:
 
     const String getName() const final { return "Kicklab"; }
 
-    State&      state {getState()};
     Parameters& parameters {state.parameters};
 };
 

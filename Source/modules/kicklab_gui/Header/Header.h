@@ -21,6 +21,8 @@ private:
     
     ScaleChooser scale;
     
+    PresetBar presets;
+    
     OutputLevel outputLevel {state.parameters};
 };
 
