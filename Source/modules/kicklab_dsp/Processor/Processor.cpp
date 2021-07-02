@@ -8,11 +8,6 @@ Processor::Processor()
 {
 }
 
-BoolParameter& Processor::getMainBypass() const
-{
-    return *parameters.mainBypass.get();
-}
-
 double Processor::getTailLengthSeconds() const
 {
     return 0.;

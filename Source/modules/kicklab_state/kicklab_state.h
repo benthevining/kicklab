@@ -25,12 +25,10 @@ namespace Kicklab
 {
 struct State : PluginState
 {
-    State() : PluginState ("KicklabState")
+    State() : PluginState (parameters, "KicklabState")
     {
     }
     
-    ParameterList& getParameters() final { return parameters; }
-
     Parameters parameters;
 };
 

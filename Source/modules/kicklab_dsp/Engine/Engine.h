@@ -1,7 +1,7 @@
 #pragma once
 
 #include "synth/KickSynth.h"
-
+#include "effects/EffectsManager.h"
 
 namespace Kicklab
 {
@@ -21,6 +21,7 @@ private:
     State& state;
 
     KickSynth< SampleType > synth {state};
+    EffectsManager<SampleType> effects {state};
 };
 
 }  // namespace Kicklab

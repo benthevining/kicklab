@@ -14,8 +14,7 @@ private:
     bool canAddBus (bool isInput) const final { return isInput; }
     bool isBusesLayoutSupported (const BusesLayout& layouts) const final;
 
-    double         getTailLengthSeconds() const final;
-    BoolParameter& getMainBypass() const final;
+    double getTailLengthSeconds() const final;
 
     bool acceptsMidi() const final { return true; }
     bool producesMidi() const final { return true; }
@@ -23,8 +22,6 @@ private:
     bool isMidiEffect() const final { return false; }
 
     const String getName() const final { return "Kicklab"; }
-
-    Parameters& parameters {state.parameters};
 };
 
 }  // namespace Kicklab
