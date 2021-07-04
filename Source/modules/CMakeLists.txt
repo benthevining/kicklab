@@ -1,3 +1,1 @@
-juce_add_modules (kicklab_dsp
-	              kicklab_gui
-	              kicklab_state)
+_bv_add_modules()
