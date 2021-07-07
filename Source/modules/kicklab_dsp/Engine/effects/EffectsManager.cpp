@@ -16,7 +16,7 @@ void EffectsManager<SampleType>::prepare (double samplerate, int blocksize)
 }
 
 template<typename SampleType>
-void EffectsManager<SampleType>::process (juce::AudioBuffer<SampleType>& audio)
+void EffectsManager<SampleType>::process (juce::AudioBuffer<SampleType>&)
 {
     
 }

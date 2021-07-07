@@ -11,7 +11,6 @@ struct Parameters : ParameterList
     Parameters() : ParameterList ("KicklabParameters")
     {
     }
-
 };
 
 }  // namespace Kicklab
