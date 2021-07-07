@@ -25,7 +25,7 @@ namespace Kicklab
 {
 struct State : PluginState
 {
-    State() : PluginState (parameters, "KicklabState")
+    State() : PluginState (parameters, "Kicklab")
     {
     }
     
