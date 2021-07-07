@@ -8,11 +8,11 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
 include (scripts/FindShared-code.cmake)
 
-add_subdirectory (Source/modules)
-
 #
 
 set (sourceDir ${CMAKE_CURRENT_LIST_DIR}/Source)
+
+bv_add_modules (${sourceDir}/modules)
 
 #
 
