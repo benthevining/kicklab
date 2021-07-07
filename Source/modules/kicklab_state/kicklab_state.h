@@ -15,9 +15,6 @@ END_JUCE_MODULE_DECLARATION
 
 #endif
 
-#include <bv_midi/bv_midi.h>
-#include <bv_plugin/bv_plugin.h>
-#include <bv_networking/bv_networking.h>
 
 #include "Parameters.h"
 

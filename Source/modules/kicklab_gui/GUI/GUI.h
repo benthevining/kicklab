@@ -1,5 +1,8 @@
 #pragma once
 
+#include <kicklab_state/kicklab_state.h>
+#include <bv_plugin_gui/bv_plugin_gui.h>
+
 #include <kicklab_gui/Header/Header.h>
 
 namespace Kicklab

@@ -15,7 +15,5 @@ END_JUCE_MODULE_DECLARATION
 
 #endif
 
-#include <bv_plugin_gui/bv_plugin_gui.h>
-#include <kicklab_state/kicklab_state.h>
 
 #include "GUI/GUI.h"

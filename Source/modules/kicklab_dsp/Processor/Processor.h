@@ -1,5 +1,6 @@
 #pragma once
 
+#include <kicklab_state/kicklab_state.h>
 #include <kicklab_dsp/Engine/Engine.h>
 
 

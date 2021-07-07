@@ -15,7 +15,5 @@ END_JUCE_MODULE_DECLARATION
 
 #endif
 
-#include <kicklab_state/kicklab_state.h>
-
 #include "Processor/Processor.h"
 
