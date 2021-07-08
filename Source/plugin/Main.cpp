@@ -6,5 +6,5 @@ juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     using namespace Kicklab;
 
-    return new dsp::ProcessorWithEditor< Processor, GUI >(1060, 640);
+    return new plugin::ProcessorWithEditor< Processor, GUI >(1060, 640);
 }

@@ -6,7 +6,7 @@
 
 namespace Kicklab
 {
-class Processor : public dsp::Processor< State, Engine >
+class Processor : public plugin::Processor< State, Engine >
 {
 public:
     Processor();

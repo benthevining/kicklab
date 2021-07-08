@@ -2,7 +2,7 @@
 namespace Kicklab
 {
 Processor::Processor()
-    : dsp::Processor< State, Engine > (BusesProperties()
+    : plugin::Processor< State, Engine > (BusesProperties()
                                            .withInput (TRANS ("Input"), juce::AudioChannelSet::stereo(), true)
                                            .withOutput (TRANS ("Output"), juce::AudioChannelSet::stereo(), true))
 {

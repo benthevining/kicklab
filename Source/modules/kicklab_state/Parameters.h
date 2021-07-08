@@ -10,9 +10,9 @@ using namespace bav;
 using namespace ParameterValueConversionLambdas;
 
 
-struct Parameters : ParameterList
+struct Parameters : plugin::ParameterList
 {
-    Parameters() : ParameterList ("KicklabParameters")
+    Parameters() : plugin::ParameterList ("KicklabParameters")
     {
     }
 };

@@ -20,9 +20,9 @@ END_JUCE_MODULE_DECLARATION
 
 namespace Kicklab
 {
-struct State : PluginState
+struct State : plugin::State
 {
-    State() : PluginState (parameters, "Kicklab")
+    State() : plugin::State (parameters, "Kicklab")
     {
     }
     
@@ -30,7 +30,7 @@ struct State : PluginState
 };
 
 
-struct PresetManager : PresetManagerBase
+struct PresetManager : plugin::PresetManagerBase
 {
     using PresetManagerBase::PresetManagerBase;
 
