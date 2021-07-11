@@ -6,7 +6,7 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 #set (BV_USE_MTS_ESP TRUE)
 #set (BV_USE_ABLETON_LINK TRUE) 
 
-include (scripts/FindShared-code.cmake)
+include (scripts/get_shared_code.cmake)
 
 #
 
