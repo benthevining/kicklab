@@ -16,6 +16,8 @@ bv_add_modules (${sourceDir}/modules)
 
 #
 
+bv_detect_default_plugin_formats (formats)
+
 juce_add_plugin (Kicklab
     PLUGIN_NAME                     Kicklab
     PRODUCT_NAME					Kicklab
@@ -33,7 +35,7 @@ juce_add_plugin (Kicklab
     VST_NUM_MIDI_OUTS               0
     VST3_CATEGORIES                 ""
     AU_MAIN_TYPE                    ""
-    FORMATS                         AU VST3 Standalone Unity
+    FORMATS                         ${formats}
     MICROPHONE_PERMISSION_ENABLED   FALSE
     PLUGIN_CODE                 	Kclb  
     DOCUMENT_BROWSER_ENABLED    	TRUE
