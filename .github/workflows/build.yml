@@ -44,3 +44,21 @@ jobs:
     - name: Run main build
       shell: bash
       run: cd $GITHUB_WORKSPACE/autoBuild && cmake -B Builds && cmake --build $GITHUB_WORKSPACE/autoBuild/Builds --config Release
+
+  LV2-build:
+ 
+      name: LV2 build
+      runs-on: Ubuntu-latest
+      timeout-minutes: 60
+      
+      steps:
+      
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          path: autoBuild 
+        
+      - name: Run build script
+        shell: bash
+        run: cd $GITHUB_WORKSPACE/autoBuild/scripts && bash build_LV2.sh
