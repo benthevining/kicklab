@@ -9,7 +9,7 @@ vendor:            Ben Vining
 version:           0.0.1
 name:              kicklab_state
 description:       State for Kicklab
-dependencies:      bv_midi bv_plugin bv_networking
+dependencies:      bv_midi bv_plugin
 
 END_JUCE_MODULE_DECLARATION
 
