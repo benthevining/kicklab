@@ -16,7 +16,8 @@ bv_add_modules (${sourceDir}/modules)
 
 #
 
-bv_detect_default_plugin_formats (formats)
+set (bv_default_formats Standalone VST3 AU Unity)
+bv_detect_plugin_formats (formats)
 
 juce_add_plugin (Kicklab
     PLUGIN_NAME                     Kicklab
