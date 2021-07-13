@@ -39,7 +39,7 @@ jobs:
     - name: Install JUCE's Linux dependencies
       if: runner.os == 'Linux'
       shell: bash
-      run: cd $GITHUB_WORKSPACE/autoBuild/scripts && bash install_linux_deps.sh
+      run: cd $GITHUB_WORKSPACE/autoBuild/scripts/shell && bash install_juce_linux_deps.sh
 
     - name: Run main build
       shell: bash
@@ -61,4 +61,4 @@ jobs:
         
       - name: Run build script
         shell: bash
-        run: cd $GITHUB_WORKSPACE/autoBuild/scripts && bash build_LV2.sh
+        run: cd $GITHUB_WORKSPACE/autoBuild/scripts/shell && bash build_LV2.sh
