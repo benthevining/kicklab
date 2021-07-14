@@ -58,7 +58,7 @@ juce_add_plugin (Kicklab
 
 configure_default_juce_plugin (Kicklab)
 
-target_sources (Kicklab PRIVATE ${sourceDir}/plugin/Main.cpp)
+target_sources (Kicklab PRIVATE ${sourceDir}/Main.cpp)
 
 target_include_directories (Kicklab PRIVATE ${sourceDir})
 
