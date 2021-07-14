@@ -65,4 +65,4 @@ jobs:
         
       - name: Run build script
         shell: bash
-        run: cd $GITHUB_WORKSPACE/autoBuild/scripts/shell && bash build_LV2.sh
+        run: bash $GITHUB_WORKSPACE/autoBuild/scripts/shell/build_LV2.sh $GITHUB_WORKSPACE/autoBuild
