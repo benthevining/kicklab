@@ -12,7 +12,7 @@ include (scripts/cmake/get_shared_code.cmake)
 
 set (sourceDir ${CMAKE_CURRENT_LIST_DIR}/Source)
 
-bv_add_modules (${sourceDir}/modules)
+bv_add_juce_modules (${sourceDir}/modules)
 
 #
 
@@ -56,13 +56,13 @@ juce_add_plugin (Kicklab
     SEND_APPLE_EVENTS_PERMISSION_ENABLED FALSE
     )
 
-configure_default_juce_plugin (Kicklab)
+bv_configure_juce_plugin (Kicklab)
 
 target_sources (Kicklab PRIVATE ${sourceDir}/Main.cpp)
 
 target_include_directories (Kicklab PRIVATE ${sourceDir})
 
-add_binary_data_folder (Kicklab assets)
+bv_add_resources_folder (Kicklab assets)
 
 target_link_libraries (Kicklab PRIVATE kicklab_dsp kicklab_gui)
 
