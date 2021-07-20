@@ -5,6 +5,8 @@
 
 #include <kicklab_gui/Header/Header.h>
 
+#include <bv_spline/bv_spline.h>
+
 namespace Kicklab
 {
 class GUI : public juce::Component

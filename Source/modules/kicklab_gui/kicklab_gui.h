@@ -9,7 +9,7 @@ vendor:            Ben Vining
 version:           0.0.1
 name:              kicklab_gui
 description:       GUI for Kicklab
-dependencies:      bv_plugin_gui kicklab_state
+dependencies:      bv_plugin_gui bv_spline kicklab_state
 
 END_JUCE_MODULE_DECLARATION
 
