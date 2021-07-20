@@ -8,22 +8,21 @@
 
 namespace Kicklab
 {
-
 class Header : public juce::Component
 {
 public:
     Header (State& stateToUse);
-    
+
 private:
     State& state;
-    
+
     LogoButton logo;
-    
+
     ScaleChooser scale;
-    
+
     PresetBar presets;
-    
+
     OutputLevel outputLevel {state.parameters};
 };
 
-}
+}  // namespace Kicklab

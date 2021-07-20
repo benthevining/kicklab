@@ -14,9 +14,10 @@ private:
     void resized() final;
     void createAboutWindow();
 
-    gui::TextButton button {"Imogen", [&]{ createAboutWindow(); }};
+    gui::TextButton button {"Imogen", [&]
+                            { createAboutWindow(); }};
 
-    gui::Popup<AboutPopup> aboutWindow;
+    gui::Popup< AboutPopup > aboutWindow;
 };
 
-}
+}  // namespace Kicklab

@@ -16,4 +16,3 @@ END_JUCE_MODULE_DECLARATION
 #endif
 
 #include "Processor/Processor.h"
-

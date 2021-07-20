@@ -20,8 +20,8 @@ private:
 
     State& state;
 
-    KickSynth< SampleType > synth {state};
-    EffectsManager<SampleType> effects {state};
+    KickSynth< SampleType >      synth {state};
+    EffectsManager< SampleType > effects {state};
 };
 
 }  // namespace Kicklab

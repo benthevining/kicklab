@@ -19,7 +19,7 @@ void Engine< SampleType >::prepared (int blocksize, double samplerate)
 {
     if (! synth.isInitialized())
         synth.initialize (12, samplerate, blocksize);
-    
+
     synth.prepare (samplerate, blocksize);
     effects.prepare (samplerate, blocksize);
 }

@@ -2,12 +2,10 @@
 
 namespace Kicklab
 {
-
 class PresetBar : public juce::Component
 {
 public:
-    
 private:
 };
 
-}
+}  // namespace Kicklab

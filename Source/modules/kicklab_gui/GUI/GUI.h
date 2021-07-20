@@ -7,16 +7,15 @@
 
 namespace Kicklab
 {
-
 class GUI : public juce::Component
 {
 public:
     GUI (State& stateToUse);
-    
+
 private:
     State& state;
-    
+
     Header header {state};
 };
 
-}
+}  // namespace Kicklab

@@ -25,7 +25,7 @@ struct State : plugin::State
     State() : plugin::State (parameters, "Kicklab")
     {
     }
-    
+
     Parameters parameters;
 };
 

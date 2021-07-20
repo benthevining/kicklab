@@ -3,12 +3,10 @@
 
 namespace Kicklab
 {
-
 class ScaleChooser : public juce::Component
 {
 public:
-    
 private:
 };
 
-}
+}  // namespace Kicklab

@@ -1,16 +1,14 @@
 
 namespace Kicklab
 {
-
 OutputLevel::OutputLevel (Parameters& paramsToUse)
-: params (paramsToUse)
+    : params (paramsToUse)
 {
     gui::addAndMakeVisible (this, thumb, meter);
 }
 
 void OutputLevel::paint (juce::Graphics&)
 {
-    
 }
 
 void OutputLevel::resized()
@@ -18,4 +16,4 @@ void OutputLevel::resized()
     // thumb, meter
 }
 
-}
+}  // namespace Kicklab

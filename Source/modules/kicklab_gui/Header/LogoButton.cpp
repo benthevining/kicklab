@@ -1,7 +1,6 @@
 
 namespace Kicklab
 {
-
 LogoButton::LogoButton()
 {
     gui::addAndMakeVisible (this, button, aboutWindow);
@@ -14,8 +13,9 @@ void LogoButton::resized()
 
 void LogoButton::createAboutWindow()
 {
-    aboutWindow.create ([&]{ aboutWindow.destroy(); });
+    aboutWindow.create ([&]
+                        { aboutWindow.destroy(); });
     resized();
 }
 
-}
+}  // namespace Kicklab
