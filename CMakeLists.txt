@@ -1,23 +1,10 @@
-
 cmake_minimum_required (VERSION 3.19) 
 
 project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
-#set (BV_USE_MTS_ESP TRUE)
-#set (BV_USE_ABLETON_LINK TRUE) 
-
 add_subdirectory (scripts)
 
-#
-
 set (sourceDir ${CMAKE_CURRENT_LIST_DIR}/Source)
-
-bv_add_juce_modules (${sourceDir}/modules)
-
-#
-
-set (bv_default_formats Standalone VST3 AU Unity)
-bv_detect_plugin_formats (formats)
 
 juce_add_plugin (Kicklab
     PLUGIN_NAME                     Kicklab
@@ -36,7 +23,7 @@ juce_add_plugin (Kicklab
     VST_NUM_MIDI_OUTS               0
     VST3_CATEGORIES                 ""
     AU_MAIN_TYPE                    ""
-    FORMATS                         ${formats}
+    FORMATS                         ${BV_PLUGIN_FORMATS}
     MICROPHONE_PERMISSION_ENABLED   FALSE
     PLUGIN_CODE                 	Kclb  
     DOCUMENT_BROWSER_ENABLED    	TRUE
