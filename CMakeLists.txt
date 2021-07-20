@@ -4,8 +4,6 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
 add_subdirectory (scripts)
 
-set (sourceDir ${CMAKE_CURRENT_LIST_DIR}/Source)
-
 juce_add_plugin (Kicklab
     PLUGIN_NAME                     Kicklab
     PRODUCT_NAME					Kicklab
@@ -45,12 +43,11 @@ juce_add_plugin (Kicklab
 
 bv_configure_juce_plugin (TARGET Kicklab BROWSER)
 
-target_sources (Kicklab PRIVATE ${sourceDir}/Main.cpp)
+target_sources (Kicklab PRIVATE ${BV_PROJECT_SOURCE_DIR}/Main.cpp)
 
-target_include_directories (Kicklab PRIVATE ${sourceDir})
+target_include_directories (Kicklab PRIVATE ${BV_PROJECT_SOURCE_DIR})
 
 bv_add_resources_folder (TARGET Kicklab FOLDER assets)
 
 target_link_libraries (Kicklab PRIVATE kicklab_dsp kicklab_gui)
-
 
