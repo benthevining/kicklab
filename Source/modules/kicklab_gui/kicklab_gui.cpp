@@ -3,7 +3,6 @@
 #include "Header/OutputLevel/LevelMeter.cpp"
 #include "Header/OutputLevel/Thumb.cpp"
 #include "Header/OutputLevel/OutputLevel.cpp"
-#include "Header/PresetBar/PresetBar.cpp"
 #include "Header/ScaleChooser.cpp"
 #include "Header/AboutPopup.cpp"
 #include "Header/LogoButton.cpp"

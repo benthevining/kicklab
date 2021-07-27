@@ -1,7 +1,6 @@
 #pragma once
 
 #include "LogoButton.h"
-#include "PresetBar/PresetBar.h"
 #include "OutputLevel/OutputLevel.h"
 #include "ScaleChooser.h"
 
@@ -20,7 +19,7 @@ private:
 
     ScaleChooser scale;
 
-    PresetBar presets;
+    plugin::PresetBar presets {state, "Kicklab", ".kicklabpreset"};
 
     OutputLevel outputLevel {state.parameters};
 };
