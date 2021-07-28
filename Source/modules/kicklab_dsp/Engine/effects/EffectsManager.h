@@ -10,7 +10,7 @@ public:
 
     void prepare (double samplerate, int blocksize);
 
-    void process (juce::AudioBuffer< SampleType >& audio);
+    void process (AudioBuffer< SampleType >& audio);
 
 private:
     State& state;
