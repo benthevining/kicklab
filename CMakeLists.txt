@@ -41,13 +41,11 @@ juce_add_plugin (Kicklab
     SEND_APPLE_EVENTS_PERMISSION_ENABLED FALSE
     )
 
-bv_configure_juce_plugin (TARGET Kicklab BROWSER)
+bv_configure_juce_plugin (TARGET Kicklab BROWSER ASSET_FOLDER assets)
 
 target_sources (Kicklab PRIVATE ${BV_PROJECT_SOURCE_DIR}/Main.cpp)
 
 target_include_directories (Kicklab PRIVATE ${BV_PROJECT_SOURCE_DIR})
-
-bv_add_resources_folder (TARGET Kicklab FOLDER assets)
 
 target_link_libraries (Kicklab PRIVATE kicklab_dsp kicklab_gui)
 
