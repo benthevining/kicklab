@@ -8,7 +8,7 @@ Engine< SampleType >::Engine (State& stateToUse)
 }
 
 template < typename SampleType >
-void Engine< SampleType >::renderBlock (const AudioBuffer&, AudioBuffer& output, MidiBuffer& midiMessages, bool)
+void Engine< SampleType >::renderBlock (const AudioBuffer< SampleType >&, AudioBuffer< SampleType >& output, MidiBuffer& midiMessages, bool)
 {
     synth.renderVoices (midiMessages, output);
     effects.process (output);

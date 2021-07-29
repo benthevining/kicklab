@@ -8,7 +8,7 @@ KickSynthVoice< SampleType >::KickSynthVoice (State& stateToUse, dsp::SynthBase<
 }
 
 template < typename SampleType >
-void KickSynthVoice< SampleType >::renderPlease (AudioBuffer& output, float desiredFrequency, double currentSamplerate)
+void KickSynthVoice< SampleType >::renderPlease (AudioBuffer< SampleType >& output, float desiredFrequency, double currentSamplerate)
 {
     juce::ignoreUnused (output, desiredFrequency, currentSamplerate);
 }
