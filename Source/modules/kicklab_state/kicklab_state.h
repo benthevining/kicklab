@@ -22,9 +22,11 @@ namespace Kicklab
 {
 struct State : plugin::State
 {
-    State() : plugin::State (parameters, "Kicklab")
+    State() : plugin::State ("Kicklab")
     {
     }
+
+    plugin::ParameterList& getParameters() final { return parameters; }
 
     Parameters parameters;
 };
