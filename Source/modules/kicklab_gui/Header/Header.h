@@ -19,7 +19,7 @@ private:
 
     ScaleChooser scale;
 
-    plugin::PresetBar presets {state, "Kicklab", ".kicklabpreset"};
+    // plugin::PresetBar presets {state, "Kicklab", ".kicklabpreset"};
 
     OutputLevel outputLevel {state.parameters};
 };
