@@ -1,8 +1,7 @@
 
 namespace Kicklab
 {
-GUI::GUI (State& stateToUse)
-    : state (stateToUse)
+BV_IMPLEMENT_PLUGIN_GUI_CONSTRUCTOR (GUI, State)
 {
     setInterceptsMouseClicks (false, true);
 

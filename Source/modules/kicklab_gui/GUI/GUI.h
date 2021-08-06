@@ -9,10 +9,10 @@
 
 namespace Kicklab
 {
-class GUI : public juce::Component
+class GUI : public plugin::GUI
 {
 public:
-    GUI (State& stateToUse);
+    BV_DECLARE_PLUGIN_GUI_CONSTRUCTOR (GUI, State);
 
 private:
     State& state;
