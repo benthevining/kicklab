@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.19)
 
 project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
-add_subdirectory (scripts)
+add_subdirectory (UsefulScripts)
 
 juce_add_plugin (Kicklab
     PLUGIN_NAME                     Kicklab
