@@ -20,9 +20,18 @@ END_JUCE_MODULE_DECLARATION
 
 namespace Kicklab
 {
-struct State : plugin::State< Parameters >
+struct CustomStateData : SerializableData
 {
-    State() : plugin::State< Parameters > ("Kicklab")
+private:
+    void serialize (TreeReflector& ref) final
+    {
+    }
+};
+
+
+struct State : plugin::CustomState< Parameters, CustomStateData >
+{
+    State() : plugin::CustomState< Parameters, CustomStateData > ("Kicklab")
     {
     }
 };
