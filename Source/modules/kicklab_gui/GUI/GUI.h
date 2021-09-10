@@ -9,14 +9,12 @@
 
 namespace Kicklab
 {
-class GUI : public plugin::GUI
+class GUI : public plugin::GUI< State >
 {
 public:
-    BV_DECLARE_PLUGIN_GUI_CONSTRUCTOR (GUI, State);
+    GUI (plugin::PluginState< State >& pluginState);
 
 private:
-    State& state;
-
     Header header {state};
 };
 
