@@ -5,14 +5,12 @@
 namespace Kicklab
 {
 template < typename SampleType >
-class KickSynth : public dsp::SynthBase< SampleType >
+class KickSynth : public dsp::LambdaSynth< SampleType >
 {
 public:
     KickSynth (State& stateToUse);
 
 private:
-    dsp::SynthVoiceBase< SampleType >* createVoice() final;
-
     State& state;
 };
 
