@@ -5,11 +5,10 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 add_subdirectory (UsefulScripts)
 
 juce_add_plugin (Kicklab
+    ${BV_DEFAULT_BRAND_FLAGS}
     PLUGIN_NAME                     Kicklab
     PRODUCT_NAME					Kicklab
     VERSION                     	${CMAKE_PROJECT_VERSION}
-    BUNDLE_ID                   	com.BenViningMusicSoftware.Kicklab
-    PLUGIN_MANUFACTURER_CODE        Benv
     DESCRIPTION                     "Kick synthesizer"
     IS_SYNTH                        TRUE
     IS_MIDI_EFFECT                  FALSE
@@ -29,10 +28,6 @@ juce_add_plugin (Kicklab
     NEEDS_CURL                  	TRUE
     NEEDS_WEB_BROWSER           	TRUE
     ICON_BIG                    	""  # path to icon file
-    COMPANY_NAME                	BenViningMusicSoftware
-    COMPANY_WEBSITE             	www.benvining.com
-    COMPANY_EMAIL               	ben.the.vining@gmail.com
-    COMPANY_COPYRIGHT           	"This software is provided as-is, with no guarantee of completion or fitness for any particular purpose, by Ben Vining, under the terms and conditions of the GNU Public License."
     STATUS_BAR_HIDDEN           	TRUE  # for iOS
     REQUIRES_FULL_SCREEN        	TRUE  # for iOS
     IPAD_SCREEN_ORIENTATIONS    	UIInterfaceOrientationUnknown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight
