@@ -2,13 +2,13 @@ cmake_minimum_required (VERSION 3.19)
 
 project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
-add_subdirectory (UsefulScripts)
+add_subdirectory (GetLemons)
 
 juce_add_plugin (Kicklab
     ${BV_DEFAULT_BRAND_FLAGS}
     PLUGIN_NAME                     Kicklab
     PRODUCT_NAME					Kicklab
-    VERSION                     	${CMAKE_PROJECT_VERSION}
+    VERSION                     	${PROJECT_VERSION}
     DESCRIPTION                     "Kick synthesizer"
     IS_SYNTH                        TRUE
     IS_MIDI_EFFECT                  FALSE
@@ -20,7 +20,7 @@ juce_add_plugin (Kicklab
     VST_NUM_MIDI_OUTS               0
     VST3_CATEGORIES                 ""
     AU_MAIN_TYPE                    ""
-    FORMATS                         ${BV_PLUGIN_FORMATS}
+    FORMATS                         ${LEMONS_PLUGIN_FORMATS}
     MICROPHONE_PERMISSION_ENABLED   FALSE
     PLUGIN_CODE                 	Kclb  
     DOCUMENT_BROWSER_ENABLED    	TRUE
@@ -36,11 +36,11 @@ juce_add_plugin (Kicklab
     SEND_APPLE_EVENTS_PERMISSION_ENABLED FALSE
     )
 
-bv_configure_juce_plugin (TARGET Kicklab BROWSER ASSET_FOLDER assets)
+lemons_configure_juce_plugin (TARGET Kicklab BROWSER ASSET_FOLDER assets)
 
-target_sources (Kicklab PRIVATE ${BV_PROJECT_SOURCE_DIR}/Main.cpp)
+target_sources (Kicklab PRIVATE ${LEMONS_PROJECT_SOURCE_DIR}/Main.cpp)
 
-target_include_directories (Kicklab PRIVATE ${BV_PROJECT_SOURCE_DIR})
+target_include_directories (Kicklab PRIVATE ${LEMONS_PROJECT_SOURCE_DIR})
 
 target_link_libraries (Kicklab PRIVATE kicklab_dsp kicklab_gui)
 
