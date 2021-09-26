@@ -1,11 +1,11 @@
 #pragma once
 
 #include <kicklab_state/kicklab_state.h>
-#include <bv_plugin_gui/bv_plugin_gui.h>
+#include <lemons_plugin_gui/lemons_plugin_gui.h>
 
 #include <kicklab_gui/Header/Header.h>
 
-#include <bv_spline/bv_spline.h>
+#include <lemons_spline/lemons_spline.h>
 
 namespace Kicklab
 {

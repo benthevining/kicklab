@@ -1,6 +1,6 @@
 #pragma once
 
-#if 0
+/*-------------------------------------------------------------------------------------
 
 BEGIN_JUCE_MODULE_DECLARATION
 
@@ -9,11 +9,11 @@ vendor:            Ben Vining
 version:           0.0.1
 name:              kicklab_state
 description:       State for Kicklab
-dependencies:      bv_midi bv_plugin
+dependencies:      lemons_midi lemons_plugin
 
 END_JUCE_MODULE_DECLARATION
 
-#endif
+-------------------------------------------------------------------------------------*/
 
 
 #include "Parameters.h"

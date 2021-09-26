@@ -1,7 +1,7 @@
 #pragma once
 
-#include <bv_midi/bv_midi.h>
-#include <bv_plugin/bv_plugin.h>
+#include <lemons_midi/lemons_midi.h>
+#include <lemons_plugin/lemons_plugin.h>
 
 namespace Kicklab
 {

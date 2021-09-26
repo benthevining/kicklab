@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include <bv_synth/bv_synth.h>
+#include <lemons_synth/lemons_synth.h>
 
 namespace Kicklab
 {
