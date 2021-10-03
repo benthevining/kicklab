@@ -6,7 +6,6 @@
 namespace Kicklab
 {
 using namespace lemons;
-using namespace ParameterValueConversionLambdas;
 
 
 struct Parameters : plugin::ParameterList
