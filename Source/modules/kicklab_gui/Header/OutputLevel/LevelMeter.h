@@ -25,8 +25,8 @@ private:
 
     Parameters& params;
 
-    //Bar left {*params.outputLevelL.get()};
-    //Bar right {*params.outputLevelR.get()};
+    // Bar left {*params.outputLevelL.get()};
+    // Bar right {*params.outputLevelR.get()};
 };
 
 }  // namespace Kicklab
