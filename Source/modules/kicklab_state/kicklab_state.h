@@ -25,6 +25,7 @@ struct CustomStateData : SerializableData
 private:
     void serialize (TreeReflector& ref) final
     {
+        juce::ignoreUnused (ref);
     }
 };
 
