@@ -4,10 +4,10 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
 add_subdirectory (GetLemons)
 
-juce_add_plugin (Kicklab
+juce_add_plugin (${PROJECT_NAME}
     ${BV_DEFAULT_BRAND_FLAGS}
-    PLUGIN_NAME                     Kicklab
-    PRODUCT_NAME					Kicklab
+    PLUGIN_NAME                     ${PROJECT_NAME}
+    PRODUCT_NAME					${PROJECT_NAME}
     VERSION                     	${PROJECT_VERSION}
     DESCRIPTION                     "Kick synthesizer"
     IS_SYNTH                        TRUE
@@ -36,11 +36,11 @@ juce_add_plugin (Kicklab
     SEND_APPLE_EVENTS_PERMISSION_ENABLED FALSE
     )
 
-lemons_configure_juce_plugin (TARGET Kicklab BROWSER ASSET_FOLDER assets)
+lemons_configure_juce_plugin (TARGET ${PROJECT_NAME} BROWSER ASSET_FOLDER assets)
 
-target_sources (Kicklab PRIVATE ${LEMONS_PROJECT_SOURCE_DIR}/Main.cpp)
+target_sources (${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/Source/Main.cpp)
 
-target_include_directories (Kicklab PRIVATE ${LEMONS_PROJECT_SOURCE_DIR})
+target_include_directories (${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/Source)
 
-target_link_libraries (Kicklab PRIVATE kicklab_dsp kicklab_gui)
+target_link_libraries (${PROJECT_NAME} PRIVATE kicklab_dsp kicklab_gui)
 
