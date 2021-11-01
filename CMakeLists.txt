@@ -4,6 +4,10 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
 add_subdirectory (GetLemons)
 
+set (sourceDir "${CMAKE_CURRENT_LIST_DIR}/Source")
+
+lemons_add_juce_modules ("${sourceDir}/modules")
+
 juce_add_plugin (${PROJECT_NAME}
     ${BV_DEFAULT_BRAND_FLAGS}
     PLUGIN_NAME                     ${PROJECT_NAME}
@@ -35,10 +39,6 @@ juce_add_plugin (${PROJECT_NAME}
     DOCUMENT_EXTENSIONS         	xml
     SEND_APPLE_EVENTS_PERMISSION_ENABLED FALSE
     )
-
-set (sourceDir "${CMAKE_CURRENT_LIST_DIR}/Source")
-
-lemons_add_juce_modules ("${sourceDir}/modules")
 
 lemons_configure_juce_plugin (TARGET ${PROJECT_NAME} BROWSER ASSET_FOLDER assets)
 
