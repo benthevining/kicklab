@@ -4,8 +4,6 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
 add_subdirectory (GetLemons)
 
-lemons_add_juce_modules ("${CMAKE_CURRENT_LIST_DIR}/Source/modules")
-
 juce_add_plugin (${PROJECT_NAME}
     ${BV_DEFAULT_BRAND_FLAGS}
     PLUGIN_NAME                     ${PROJECT_NAME}
@@ -40,9 +38,13 @@ juce_add_plugin (${PROJECT_NAME}
 
 lemons_configure_juce_plugin (TARGET ${PROJECT_NAME} BROWSER ASSET_FOLDER assets)
 
-target_sources (${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/Source/Main.cpp)
+set (sourceDir "${CMAKE_CURRENT_LIST_DIR}/Source")
 
-target_include_directories (${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/Source)
+lemons_add_juce_modules ("${sourceDir}/modules")
+
+target_sources (${PROJECT_NAME} PRIVATE "${sourceDir}/Main.cpp")
+
+target_include_directories (${PROJECT_NAME} PRIVATE ${sourceDir})
 
 target_link_libraries (${PROJECT_NAME} PRIVATE kicklab_dsp kicklab_gui)
 
