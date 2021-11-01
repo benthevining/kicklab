@@ -4,6 +4,8 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
 add_subdirectory (GetLemons)
 
+lemons_add_juce_modules ("${CMAKE_CURRENT_LIST_DIR}/Source/modules")
+
 juce_add_plugin (${PROJECT_NAME}
     ${BV_DEFAULT_BRAND_FLAGS}
     PLUGIN_NAME                     ${PROJECT_NAME}
