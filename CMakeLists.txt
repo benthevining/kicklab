@@ -36,11 +36,11 @@ juce_add_plugin (${PROJECT_NAME}
     SEND_APPLE_EVENTS_PERMISSION_ENABLED FALSE
     )
 
-lemons_configure_juce_plugin (TARGET ${PROJECT_NAME} BROWSER ASSET_FOLDER assets)
-
 set (sourceDir "${CMAKE_CURRENT_LIST_DIR}/Source")
 
 lemons_add_juce_modules ("${sourceDir}/modules")
+
+lemons_configure_juce_plugin (TARGET ${PROJECT_NAME} BROWSER ASSET_FOLDER assets)
 
 target_sources (${PROJECT_NAME} PRIVATE "${sourceDir}/Main.cpp")
 
