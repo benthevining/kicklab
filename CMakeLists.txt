@@ -43,7 +43,7 @@ juce_add_plugin (${PROJECT_NAME}
     SEND_APPLE_EVENTS_PERMISSION_ENABLED FALSE
     )
 
-lemons_configure_juce_plugin (TARGET ${PROJECT_NAME} BROWSER ASSET_FOLDER assets)
+lemons_configure_juce_plugin (TARGET ${PROJECT_NAME} BROWSER ASSET_FOLDER assets TRANSLATIONS)
 
 target_sources (${PROJECT_NAME} PRIVATE "${sourceDir}/Main.cpp")
 
