@@ -4,7 +4,7 @@ project (Kicklab VERSION 0.0.1 LANGUAGES CXX)
 
 add_subdirectory (GetLemons)
 
-include (LemonsAppModules)
+include (LemonsPluginModules)
 include (BVBrandFlags)
 
 set (sourceDir "${CMAKE_CURRENT_LIST_DIR}/Source")
